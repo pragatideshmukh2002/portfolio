@@ -72,10 +72,9 @@ body {
 
 
 /* ================= HERO ================= */
-/* ================= HERO SECTION ================= */
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,6 +82,7 @@ body {
     overflow: hidden;
     background: linear-gradient(to bottom, #0a0a0a, #1a1405, #000);
     color: white;
+    padding-top: 120px;
 }
 
 /* ⭐ Star Background */
@@ -184,28 +184,7 @@ body {
     box-shadow: 0 0 40px rgba(98, 219, 223, 0.4);
 }
 
-/* ⭐ Twinkle Animation */
-@keyframes twinkle {
-    from { opacity: 0.7; }
-    to { opacity: 1; }
-}
 
-/* Responsive */
-@media (max-width: 900px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-img {
-        width: 250px;
-        margin-top: 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 35px;
-    }
-}
 
 /* ================= BUTTONS ================= */
 .btn, .project-btn {
@@ -352,11 +331,103 @@ body.light-mode #contact-form button:hover { background: #005bb5; color: white; 
     100% { background-position: 0% 50%; }
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .navbar { padding: 15px 20px; }
-    .nav-links { gap: 15px; font-size: 14px; }
-    .hero h1 { font-size: 28px; }
-    .card { width: 90%; }
+
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
 }
 
+/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    /* Navbar */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: linear-gradient(135deg, #000000, #141e30, #243b55);
+        width: 220px;
+        padding: 25px;
+        border-radius: 10px;
+        transition: 0.4s ease;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        right: 20px;
+    }
+
+    .nav-links a {
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* HERO FIX */
+    .hero {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;   /* Correct mobile size */
+        line-height: 1.3;
+    }
+
+    .typing {
+        font-size: 18px;
+    }
+
+    .profile-img {
+        width: 220px;
+    }
+
+    /* Skills */
+    .skill-box {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Projects */
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #contact-form button {
+        align-self: center;
+    }
+}

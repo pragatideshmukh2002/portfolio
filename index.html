@@ -24,11 +24,24 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
+        <div class="hamburger">
+    <i class="fa fa-bars"></i>
+</div>
         <button id="themeToggle">
             <i class="fa fa-moon"></i>
         </button>
     </div>
+    <!-- Hamburger Icon -->
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
     
     <script>
         // ================= THEME TOGGLE =================
