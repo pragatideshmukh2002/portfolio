@@ -229,14 +229,65 @@ body {
 .project-btn { margin-top: 12px; padding: 8px 18px; border-radius: 20px; font-weight: 500; }
 
 /* ================= SKILLS ================= */
-.skill-box {
+/* .skill-box {
     display: inline-block;
     margin: 12px; padding: 12px 25px;
     border: 1px solid #00f5d4;
     border-radius: 25px;
     transition: 0.3s;
 }
-.skill-box:hover { background: #00f5d4; color: black; transform: scale(1.05); }
+.skill-box:hover { background: #00f5d4; color: black; transform: scale(1.05); } */
+/* ================= SKILLS SECTION ================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.skill-card i {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.skill-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 245, 212, 0.1);
+    box-shadow: 0 10px 25px rgba(0,245,212,0.3);
+}
+
+/* React icon animation */
+.fa-react {
+    color: #61DBFB;
+    animation: rotateReact 5s linear infinite;
+}
+
+@keyframes rotateReact {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 /* ================= PROJECTS ================= */
 .project-container {
@@ -282,6 +333,66 @@ footer { text-align: center; padding: 40px 20px; }
 footer a { color: white; margin: 0 15px; font-size: 22px; transition: 0.3s; }
 footer a:hover { color: #00f5d4; }
 
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #0d1b2a;
+    color: #fff;
+    padding: 50px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-center a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-center a:hover {
+    color: #00f5d4;
+    transform: translateX(5px);
+}
+
+.footer-right a {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: #00f5d4;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
 /* ================= LIGHT MODE ================= */
 .light-mode {
     background: linear-gradient(-45deg, #dfe1e3, #f5f7fa, #e0ecff, #cfe0f7);
@@ -307,7 +418,7 @@ body.light-mode .hero {
 .light-mode .btn, .light-mode .project-btn { background: linear-gradient(45deg, #0077ff, #00c6ff); color: white; }
 .light-mode .skill-box { border: 1px solid #0077ff; color: #111; }
 .light-mode .skill-box:hover { background: #0077ff; color: white; }
-.light-mode footer a { color: #111; }
+.light-mode footer a { color: #f6f4f4; }
 .light-mode footer a:hover { color: #0077ff; }
 .light-mode #themeToggle { color: #0077ff; }
 
