@@ -93,9 +93,9 @@ body {
     height: 100%;
     background-image:
         radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-        radial-gradient(1.5px 1.5px at 100px 150px, #ffd700, transparent),
+        radial-gradient(1.5px 1.5px at 100px 150px, #ded399, transparent),
         radial-gradient(1.8px 1.8px at 200px 80px, #ffffff, transparent),
-        radial-gradient(1.2px 1.2px at 300px 200px, #ffcc66, transparent),
+        radial-gradient(1.2px 1.2px at 300px 200px, #ecce91, transparent),
         radial-gradient(2px 2px at 400px 100px, #fff, transparent);
     background-repeat: repeat;
     background-size: 600px 400px;
@@ -410,8 +410,9 @@ body.light-mode .hero {
 }
 
 .light-mode .logo { color: #111; }
-.light-mode .nav-links a { color: #111; }
+.light-mode .nav-links a { color: #0c0c0c; }
 .light-mode .nav-links a:hover { color: #0077ff; }
+
 .light-mode .profile-img { border: 5px solid #749bc8; box-shadow: 0 0 35px #6792c4; }
 .light-mode .hero span { color: #0077ff; }
 .light-mode .card, .light-mode .project-card { background: white; color: #111; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
@@ -450,7 +451,7 @@ body.light-mode #contact-form button:hover { background: #005bb5; color: white; 
     display: none;
     font-size: 20px;
     cursor: pointer;
-    color: #f5f3f3;
+    color: #070707;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -458,6 +459,10 @@ body.light-mode #contact-form button:hover { background: #005bb5; color: white; 
 
 @media (max-width: 900px) {
 
+     body.light-mode .nav-links {
+        background: #ffffff;   /* White background */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
     /* Navbar */
     .nav-links {
         position: absolute;
@@ -540,5 +545,24 @@ body.light-mode #contact-form button:hover { background: #005bb5; color: white; 
 
     #contact-form button {
         align-self: center;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-right a {
+        margin: 0 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
     }
 }
