@@ -450,7 +450,7 @@ body.light-mode #contact-form button:hover { background: #005bb5; color: white; 
     display: none;
     font-size: 20px;
     cursor: pointer;
-    color: #000;
+    color: #f5f3f3;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
